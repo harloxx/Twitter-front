@@ -9,6 +9,12 @@ import PublishIcon from "@mui/icons-material/Publish";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import MoreHorizTwoToneIcon from "@mui/icons-material/MoreHorizTwoTone";
 
+const setUnit = (n) => {
+  if (n < 10000) return String(parseInt(n / 1000)) + "," + String(n % 1000);
+
+  return String(n / 10000.0) + "만";
+};
+
 const Post = forwardRef(
   (
     {
@@ -54,22 +60,24 @@ const Post = forwardRef(
             <div className="post__footer">
               <div>
                 <ChatBubbleOutlineIcon fontSize="small" color="action" />
-                {comment}
+                <span>{setUnit(comment)}</span>
               </div>
               <div>
                 <RepeatIcon fontSize="small" color="action" />
-                {retweet}
+                <span>{setUnit(retweet)}</span>
               </div>
               <div>
                 <FavoriteBorderIcon fontSize="small" color="action" />
-                {like}
+                <span>{setUnit(like)}</span>
               </div>
               <div>
                 <PublishIcon fontSize="small" color="action" />
               </div>
+              {/* 내가 올린 글일때만 보여주기
               <div>
                 <BarChartIcon fontSize="small" color="action" />
               </div>
+                */}
             </div>
           </div>
         </div>
