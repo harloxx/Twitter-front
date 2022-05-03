@@ -1,43 +1,56 @@
+article {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border: 1px solid lightgray;
+}
+
 .post {
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid var(--twitter-background);
-  padding-bottom: 10px;
-  width: 100px;
 }
-
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 550px;
+}
 .post__body {
-  flex: 1;
-  padding: 10px;
+  flex: 0.7;
 }
 
 .post__body > img {
   border-radius: 20px;
+  max-width: 550px;
 }
 
 .post__footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 12px;
   align-items: stretch;
-  min-height: 0px;
-  min-width: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  position: relative;
-  z-index: 0;
+  padding-bottom: 12px;
+  max-width: 425px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: rgb(83, 100, 113);
+  font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 }
-
-.post__headerDescription {
+.post__footer div {
+  display: flex;
+  align-items: center;
+}
+.post__description {
   margin-bottom: 10px;
   font-size: 15px;
 }
-
+.post__description > p {
+  margin-top: 3px;
+}
 .post__headerText > h3 {
   font-size: 15px;
-  margin-bottom: 5px;
+  margin: 0px;
 }
 
 .post__badge {
@@ -52,5 +65,9 @@
 }
 
 .post__avatar {
-  padding: 20px;
+  margin-right: 12px;
+}
+
+.post__description tag {
+  color: #1d9bf0;
 }

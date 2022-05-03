@@ -7,10 +7,10 @@ function App() {
   return (
     // BEM
     <div className="app">
-      {/*SideBar*/}
-
+      <div style={{ flex: 0.15, backgroundColor: "orange" }}>SideBar</div>
       <Feed />
       {/*Profile*/}
+      <div style={{ flex: 0.25, backgroundColor: "red" }}>Widget</div>
     </div>
   );
 }
