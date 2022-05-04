@@ -3,11 +3,12 @@
   align-items: center;
   margin-bottom: -10px;
 }
-.sidebarOption__icon {
+.sidebarOption .sidebarOption__icon {
   margin-right: 20px;
-  font-size: 500px;
+  font-size: 30px;
 }
 
-.sidebarOption__text {
-  font-size: 20px;
+.sidebarOption .sidebarOption__text {
+  font-size: 21px;
+  font-weight: normal;
 }
